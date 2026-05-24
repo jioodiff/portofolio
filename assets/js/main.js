@@ -105,32 +105,32 @@ if (contactForm) {
             },
             body: JSON.stringify(data)
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Gagal mengirim pesan.');
-            }
-            return response.json();
-        })
-        .then(res => {
-            btn.innerHTML = 'Terkirim! <i class="fas fa-check" style="margin-left:8px;"></i>';
-            btn.style.background = '#10b981'; // Warna hijau sukses
-            contactForm.reset();
-            
-            // Notifikasi aktivasi untuk pertama kali
-            alert('Pesan berhasil terkirim! \n\nCatatan: Jika ini pengiriman pertama kali, cek email Anda di (zioadriann@gmail.com) dan klik link aktivasi dari FormSubmit agar pesan selanjutnya dapat otomatis masuk.');
-        })
-        .catch(err => {
-            console.error(err);
-            btn.innerHTML = 'Gagal Mengirim <i class="fas fa-exclamation-triangle" style="margin-left:8px;"></i>';
-            btn.style.background = '#ef4444'; // Warna merah error
-        })
-        .finally(() => {
-            setTimeout(() => {
-                btn.innerHTML = originalContent;
-                btn.style.background = ''; // Reset style default
-                btn.style.opacity = '1';
-                btn.disabled = false;
-            }, 6000);
-        });
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Gagal mengirim pesan.');
+                }
+                return response.json();
+            })
+            .then(res => {
+                btn.innerHTML = 'Terkirim! <i class="fas fa-check" style="margin-left:8px;"></i>';
+                btn.style.background = '#10b981'; // Warna hijau sukses
+                contactForm.reset();
+
+                // Notifikasi aktivasi untuk pertama kali
+                alert('Pesan berhasil terkirim! \n\nCatatan: Jika ini pengiriman pertama kali, cek email Anda di (zioadriann@gmail.com) dan klik link aktivasi dari FormSubmit agar pesan selanjutnya dapat otomatis masuk.');
+            })
+            .catch(err => {
+                console.error(err);
+                btn.innerHTML = 'Gagal Mengirim <i class="fas fa-exclamation-triangle" style="margin-left:8px;"></i>';
+                btn.style.background = '#ef4444'; // Warna merah error
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.style.background = ''; // Reset style default
+                    btn.style.opacity = '1';
+                    btn.disabled = false;
+                }, 6000);
+            });
     });
 }
