@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Programmer Profesional</title>
+    <meta name="description" content="Portofolio programmer menguasai HTML, CSS, JS, PHP, C#, MySQL, Python, C++ dll.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Dev<span>Portofolio</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="btn-primary-outline">Contact Me</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="badge fade-in"><i class="fas fa-sparkles"></i> Selamat Datang di Portofolio Saya</div>
+            <h1 class="fade-in">Halo, Saya <br><span class="gradient-text">Zio Adriano</span></h1>
+            <h2 class="typing-text fade-in">Saya seorang <span class="typed-role">Full Stack Developer</span></h2>
+            <p class="fade-in hero-desc">Membangun pengalaman web yang luar biasa, memecahkan masalah kompleks dengan
+                kode elegan, dan menguasai berbagai bahasa pemrograman dari Frontend hingga Backend.</p>
+            <div class="hero-buttons fade-in">
+                <a href="#projects" class="btn-primary glow-btn">Lihat Proyek <i class="fas fa-arrow-right"
+                        style="margin-left: 8px;"></i></a>
+                <a href="#contact" class="btn-secondary">Hubungi Saya</a>
+            </div>
+            <div class="hero-socials fade-in">
+                <a href="https://instagram.com/adrnooss" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/6281317526164" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://tiktok.com/@adrnooss" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="hero-image fade-in">
+            <!-- Stylized abstract icon representation -->
+            <div class="glass-card profile-card glow-effect">
+                <div class="glow-ring"></div>
+                <i class="fas fa-laptop-code profile-icon"></i>
+            </div>
+            <!-- Decorative elements -->
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header fade-in">
+            <h2>Tentang <span class="gradient-text">Saya</span></h2>
+            <div class="underline"></div>
+            <p class="section-subtitle">Kenali Saya Lebih Dekat</p>
+        </div>
+        <div class="about-container">
+            <div class="about-image-wrapper fade-in">
+                <div class="about-glass-card">
+                    <div class="about-icon-large">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <div class="about-experience-badge">
+                        <span class="exp-number">5+</span>
+                        <span class="exp-text">Tahun<br>Pengalaman</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content-wrapper">
+                <div class="about-text fade-in">
+                    <h3>Mahasiswa & <span class="gradient-text">Tech Enthusiast</span></h3>
+                    <p>Saya adalah <strong>Zio Adriano</strong>, seorang mahasiswa dari <strong>Universitas
+                            IPWIJA</strong> yang berdedikasi tinggi dengan pengalaman dalam membangun aplikasi perangkat
+                        lunak yang scalable dan efisien. Saya selalu haus akan teknologi baru dan berorientasi pada
+                        detail.</p>
+                    <p>Dengan latar belakang kuat dalam berbagai bahasa pemrograman, saya siap menghadapi tantangan
+                        teknis apapun untuk menghasilkan produk terbaik. Fokus saya adalah menciptakan solusi inovatif
+                        dan pengalaman pengguna yang luar biasa.</p>
+                </div>
+                <div class="about-stats fade-in">
+                    <div class="stat-box">
+                        <i class="fas fa-code stat-icon"></i>
+                        <h3>50+</h3>
+                        <p>Proyek Selesai</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-award stat-icon"></i>
+                        <h3>100%</h3>
+                        <p>Kepuasan Klien</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-header fade-in">
+            <h2>Keahlian <span class="gradient-text">Teknis</span></h2>
+            <div class="underline"></div>
+            <p class="section-subtitle">Teknologi yang Saya Kuasai</p>
+        </div>
+        <div class="skills-glass-container fade-in">
+            <div class="skills-grid">
+                <!-- Skill Cards -->
+                <div class="skill-card-enhanced skill-card">
+                    <div class="skill-icon-wrapper" style="--skill-color: #E34F26;">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>HTML</h3>
+                        <div class="progress-bar-enhanced">
+                            <div class="progress-glow progress" style="width: 95%; background: #E34F26;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card-enhanced skill-card">
+                    <div class="skill-icon-wrapper" style="--skill-color: #1572B6;">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>CSS</h3>
+                        <div class="progress-bar-enhanced">
+                            <div class="progress-glow progress" style="width: 90%; background: #1572B6;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card-enhanced skill-card">
+                    <div class="skill-icon-wrapper" style="--skill-color: #F7DF1E;">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>JavaScript</h3>
+                        <div class="progress-bar-enhanced">
+                            <div class="progress-glow progress" style="width: 85%; background: #F7DF1E;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card-enhanced skill-card">
+                    <div class="skill-icon-wrapper" style="--skill-color: #777BB4;">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>PHP</h3>
+                        <div class="progress-bar-enhanced">
+                            <div class="progress-glow progress" style="width: 80%; background: #777BB4;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card-enhanced skill-card">
+                    <div class="skill-icon-wrapper" style="--skill-color: #4479A1;">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>MySQL</h3>
+                        <div class="progress-bar-enhanced">
+                            <div class="progress-glow progress" style="width: 85%; background: #4479A1;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card-enhanced skill-card">
+                    <div class="skill-icon-wrapper" style="--skill-color: #3776AB;">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h3>Python</h3>
+                        <div class="progress-bar-enhanced">
+                            <div class="progress-glow progress" style="width: 75%; background: #3776AB;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card-enhanced skill-card">
+                    <div class="skill-icon-wrapper" style="--skill-color: #9B4F96;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                            alt="C#" class="svg-icon" />
+                    </div>
+                    <div class="skill-info">
+                        <h3>C#</h3>
+                        <div class="progress-bar-enhanced">
+                            <div class="progress-glow progress" style="width: 70%; background: #9B4F96;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card-enhanced skill-card">
+                    <div class="skill-icon-wrapper" style="--skill-color: #00599C;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                            alt="C++" class="svg-icon" />
+                    </div>
+                    <div class="skill-info">
+                        <h3>C++</h3>
+                        <div class="progress-bar-enhanced">
+                            <div class="progress-glow progress" style="width: 65%; background: #00599C;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card-enhanced skill-card">
+                    <div class="skill-icon-wrapper" style="--skill-color: #3178C6;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                            alt="TypeScript" class="svg-icon" />
+                    </div>
+                    <div class="skill-info">
+                        <h3>TypeScript</h3>
+                        <div class="progress-bar-enhanced">
+                            <div class="progress-glow progress" style="width: 85%; background: #3178C6;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card-enhanced skill-card">
+                    <div class="skill-icon-wrapper" style="--skill-color: #00ADD8;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go"
+                            class="svg-icon" />
+                    </div>
+                    <div class="skill-info">
+                        <h3>Go (Golang)</h3>
+                        <div class="progress-bar-enhanced">
+                            <div class="progress-glow progress" style="width: 75%; background: #00ADD8;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card-enhanced skill-card">
+                    <div class="skill-icon-wrapper" style="--skill-color: #E05D44;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" alt="Rust"
+                            class="svg-icon" style="filter: brightness(0) invert(1);" />
+                    </div>
+                    <div class="skill-info">
+                        <h3>Rust</h3>
+                        <div class="progress-bar-enhanced">
+                            <div class="progress-glow progress" style="width: 60%; background: #E05D44;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card-enhanced skill-card">
+                    <div class="skill-icon-wrapper" style="--skill-color: #7F52FF;">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+                            alt="Kotlin" class="svg-icon" />
+                    </div>
+                    <div class="skill-info">
+                        <h3>Kotlin</h3>
+                        <div class="progress-bar-enhanced">
+                            <div class="progress-glow progress" style="width: 80%; background: #7F52FF;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header fade-in">
+            <h2>Proyek <span class="gradient-text">Terbaru</span></h2>
+            <div class="underline"></div>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card-enhanced fade-in">
+                <div class="project-image">
+                    <div class="img-placeholder"><i class="fas fa-university"></i></div>
+                    <div class="project-overlay">
+                        <a href="#" class="btn-primary-outline"><i class="fas fa-external-link-alt"></i> Detail</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Sistem Manajemen Universitas</h3>
+                    <p>Aplikasi web komprehensif menggunakan PHP, MySQL, dan JS dengan dashboard modern.</p>
+                    <div class="project-tags">
+                        <span>PHP</span><span>MySQL</span><span>JS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card-enhanced fade-in">
+                <div class="project-image">
+                    <div class="img-placeholder"><i class="fas fa-robot"></i></div>
+                    <div class="project-overlay">
+                        <a href="#" class="btn-primary-outline"><i class="fas fa-external-link-alt"></i> Detail</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Aplikasi Desktop AI</h3>
+                    <p>Software Windows cerdas menggunakan C# dan terintegrasi dengan Python Machine Learning.</p>
+                    <div class="project-tags">
+                        <span>C#</span><span>Python</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card-enhanced fade-in">
+                <div class="project-image">
+                    <div class="img-placeholder"><i class="fas fa-gamepad"></i></div>
+                    <div class="project-overlay">
+                        <a href="#" class="btn-primary-outline"><i class="fas fa-external-link-alt"></i> Detail</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Game Engine 2D</h3>
+                    <p>Sebuah game engine kustom berkinerja tinggi yang ditulis murni menggunakan C++.</p>
+                    <div class="project-tags">
+                        <span>C++</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header fade-in">
+            <h2>Hubungi <span class="gradient-text">Saya</span></h2>
+            <div class="underline"></div>
+        </div>
+        <div class="contact-container-enhanced fade-in">
+            <div class="contact-info-panel">
+                <div class="contact-bg-glow"></div>
+                <h3>Mari Berdiskusi</h3>
+                <p>Punya proyek impian atau ingin merekrut developer profesional? Jangan ragu untuk menghubungi saya!
+                </p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>email@example.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jakarta, Indonesia</span>
+                    </div>
+                </div>
+                <div class="social-links-enhanced">
+                    <a href="https://instagram.com/adrnooss" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/6281317526164" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://tiktok.com/@adrnooss" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <form class="contact-form-enhanced">
+                <div class="form-group-float">
+                    <input type="text" id="name" placeholder=" " required>
+                    <label for="name">Nama Anda</label>
+                </div>
+                <div class="form-group-float">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label for="email">Email Anda</label>
+                </div>
+                <div class="form-group-float">
+                    <textarea id="message" placeholder=" " rows="5" required></textarea>
+                    <label for="message">Pesan Anda</label>
+                </div>
+                <button type="submit" class="btn-primary glow-btn">Kirim Pesan <i class="fas fa-paper-plane"
+                        style="margin-left:8px;"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Zio Adriano. All rights reserved.</p>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
