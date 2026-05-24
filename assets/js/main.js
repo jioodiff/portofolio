@@ -76,28 +76,61 @@ faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
 
-// Form Submission Prevention (Placeholder)
-const contactForm = document.querySelector('.contact-form');
+// Form Submission with FormSubmit API (Sends notification to zioadriann@gmail.com)
+const contactForm = document.querySelector('.contact-form-enhanced');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const btn = contactForm.querySelector('button');
-        const originalText = btn.innerText;
+        const originalContent = btn.innerHTML;
 
-        btn.innerText = 'Mengirim...';
+        btn.innerHTML = 'Mengirim... <i class="fas fa-spinner fa-spin" style="margin-left:8px;"></i>';
+        btn.disabled = true;
         btn.style.opacity = '0.7';
 
-        // Simulate network request
-        setTimeout(() => {
-            btn.innerText = 'Terkirim!';
-            btn.style.background = '#10b981'; // Green color for success
-            contactForm.reset();
+        const formData = new FormData(contactForm);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
 
+        // Tambahkan subject untuk email dari FormSubmit
+        data['_subject'] = 'Diskusi Baru dari Portofolio Web!';
+
+        fetch('https://formsubmit.co/ajax/zioadriann@gmail.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Gagal mengirim pesan.');
+            }
+            return response.json();
+        })
+        .then(res => {
+            btn.innerHTML = 'Terkirim! <i class="fas fa-check" style="margin-left:8px;"></i>';
+            btn.style.background = '#10b981'; // Warna hijau sukses
+            contactForm.reset();
+            
+            // Notifikasi aktivasi untuk pertama kali
+            alert('Pesan berhasil terkirim! \n\nCatatan: Jika ini pengiriman pertama kali, cek email Anda di (zioadriann@gmail.com) dan klik link aktivasi dari FormSubmit agar pesan selanjutnya dapat otomatis masuk.');
+        })
+        .catch(err => {
+            console.error(err);
+            btn.innerHTML = 'Gagal Mengirim <i class="fas fa-exclamation-triangle" style="margin-left:8px;"></i>';
+            btn.style.background = '#ef4444'; // Warna merah error
+        })
+        .finally(() => {
             setTimeout(() => {
-                btn.innerText = originalText;
-                btn.style.background = ''; // Reset to default
+                btn.innerHTML = originalContent;
+                btn.style.background = ''; // Reset style default
                 btn.style.opacity = '1';
-            }, 3000);
-        }, 1500);
+                btn.disabled = false;
+            }, 6000);
+        });
     });
 }
