@@ -19,9 +19,17 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Particles JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-sun"></i>
+    </div>
+    
     <!-- Navbar -->
     <nav id="navbar">
         <div class="nav-container">
@@ -41,6 +49,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div id="particles-js"></div>
         <div class="hero-bg-grid"></div>
         <div class="hero-content">
             <div class="badge fade-in"><i class="fas fa-sparkles"></i> Selamat Datang di Portofolio Saya</div>
@@ -113,6 +122,34 @@
                         <p>Kepuasan Klien</p>
                     </div>
                 </div>
+                
+                <!-- Interactive Timeline -->
+                <div class="timeline fade-in">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Universitas IPWIJA</h4>
+                            <p class="timeline-date">Sekarang</p>
+                            <p>Menempuh pendidikan dengan fokus pada rekayasa perangkat lunak dan pengembangan sistem cerdas.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Full Stack Developer</h4>
+                            <p class="timeline-date">2022 - Sekarang</p>
+                            <p>Freelance dan mengerjakan berbagai proyek dari klien lokal hingga internasional.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Mulai Ngoding</h4>
+                            <p class="timeline-date">2018</p>
+                            <p>Awal perjalanan menyelami dunia pemrograman dan teknologi.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -125,9 +162,17 @@
             <p class="section-subtitle">Teknologi yang Saya Kuasai</p>
         </div>
         <div class="skills-glass-container fade-in">
+            <!-- Skill Filters -->
+            <div class="skill-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="database">Database/Tools</button>
+            </div>
+            
             <div class="skills-grid">
                 <!-- Skill Cards -->
-                <div class="skill-card-enhanced skill-card">
+                <div class="skill-card-enhanced skill-card" data-category="frontend">
                     <div class="skill-icon-wrapper" style="--skill-color: #E34F26;">
                         <i class="fab fa-html5"></i>
                     </div>
@@ -138,7 +183,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card-enhanced skill-card">
+                <div class="skill-card-enhanced skill-card" data-category="frontend">
                     <div class="skill-icon-wrapper" style="--skill-color: #1572B6;">
                         <i class="fab fa-css3-alt"></i>
                     </div>
@@ -149,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card-enhanced skill-card">
+                <div class="skill-card-enhanced skill-card" data-category="frontend">
                     <div class="skill-icon-wrapper" style="--skill-color: #F7DF1E;">
                         <i class="fab fa-js-square"></i>
                     </div>
@@ -160,7 +205,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card-enhanced skill-card">
+                <div class="skill-card-enhanced skill-card" data-category="backend">
                     <div class="skill-icon-wrapper" style="--skill-color: #777BB4;">
                         <i class="fab fa-php"></i>
                     </div>
@@ -171,7 +216,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card-enhanced skill-card">
+                <div class="skill-card-enhanced skill-card" data-category="database">
                     <div class="skill-icon-wrapper" style="--skill-color: #4479A1;">
                         <i class="fas fa-database"></i>
                     </div>
@@ -182,7 +227,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card-enhanced skill-card">
+                <div class="skill-card-enhanced skill-card" data-category="backend">
                     <div class="skill-icon-wrapper" style="--skill-color: #3776AB;">
                         <i class="fab fa-python"></i>
                     </div>
@@ -193,7 +238,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card-enhanced skill-card">
+                <div class="skill-card-enhanced skill-card" data-category="backend">
                     <div class="skill-icon-wrapper" style="--skill-color: #9B4F96;">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
                             alt="C#" class="svg-icon" />
@@ -205,7 +250,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card-enhanced skill-card">
+                <div class="skill-card-enhanced skill-card" data-category="database">
                     <div class="skill-icon-wrapper" style="--skill-color: #00599C;">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
                             alt="C++" class="svg-icon" />
@@ -217,7 +262,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card-enhanced skill-card">
+                <div class="skill-card-enhanced skill-card" data-category="frontend">
                     <div class="skill-icon-wrapper" style="--skill-color: #3178C6;">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                             alt="TypeScript" class="svg-icon" />
@@ -229,7 +274,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card-enhanced skill-card">
+                <div class="skill-card-enhanced skill-card" data-category="backend">
                     <div class="skill-icon-wrapper" style="--skill-color: #00ADD8;">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go"
                             class="svg-icon" />
@@ -241,7 +286,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card-enhanced skill-card">
+                <div class="skill-card-enhanced skill-card" data-category="backend">
                     <div class="skill-icon-wrapper" style="--skill-color: #E05D44;">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" alt="Rust"
                             class="svg-icon" style="filter: brightness(0) invert(1);" />
@@ -253,7 +298,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card-enhanced skill-card">
+                <div class="skill-card-enhanced skill-card" data-category="backend">
                     <div class="skill-icon-wrapper" style="--skill-color: #7F52FF;">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
                             alt="Kotlin" class="svg-icon" />
@@ -280,7 +325,7 @@
                 <div class="project-image">
                     <div class="img-placeholder"><i class="fas fa-university"></i></div>
                     <div class="project-overlay">
-                        <a href="#" class="btn-primary-outline"><i class="fas fa-external-link-alt"></i> Detail</a>
+                        <a href="#projects" class="btn-primary-outline project-detail-btn" data-project="1"><i class="fas fa-external-link-alt"></i> Detail</a>
                     </div>
                 </div>
                 <div class="project-info">
@@ -295,7 +340,7 @@
                 <div class="project-image">
                     <div class="img-placeholder"><i class="fas fa-robot"></i></div>
                     <div class="project-overlay">
-                        <a href="#" class="btn-primary-outline"><i class="fas fa-external-link-alt"></i> Detail</a>
+                        <a href="#projects" class="btn-primary-outline project-detail-btn" data-project="2"><i class="fas fa-external-link-alt"></i> Detail</a>
                     </div>
                 </div>
                 <div class="project-info">
@@ -310,7 +355,7 @@
                 <div class="project-image">
                     <div class="img-placeholder"><i class="fas fa-gamepad"></i></div>
                     <div class="project-overlay">
-                        <a href="#" class="btn-primary-outline"><i class="fas fa-external-link-alt"></i> Detail</a>
+                        <a href="#projects" class="btn-primary-outline project-detail-btn" data-project="3"><i class="fas fa-external-link-alt"></i> Detail</a>
                     </div>
                 </div>
                 <div class="project-info">
@@ -373,6 +418,29 @@
             </form>
         </div>
     </section>
+
+    <!-- Project Modal Popup -->
+    <div class="project-modal-backdrop" id="project-modal">
+        <div class="project-modal-content">
+            <button class="close-modal-btn" id="close-modal"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <div class="modal-img-placeholder" id="modal-icon"><i class="fas fa-laptop-code"></i></div>
+                </div>
+                <div class="modal-info-container">
+                    <h2 id="modal-title">Nama Proyek</h2>
+                    <div class="modal-tags" id="modal-tags">
+                        <!-- Tags will be injected here -->
+                    </div>
+                    <p class="modal-desc" id="modal-desc">Deskripsi lengkap proyek akan muncul di sini.</p>
+                    <div class="modal-actions">
+                        <a href="#" class="btn-primary" onclick="alert('Ini hanya demo fungsionalitas UI modal.')"><i class="fas fa-globe"></i> Live Demo</a>
+                        <a href="#" class="btn-secondary" onclick="alert('Repository Github Private.')"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>

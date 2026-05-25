@@ -7,13 +7,10 @@
     --bg-card: rgba(25, 25, 35, 0.6);
     --bg-nav: rgba(10, 10, 15, 0.8);
 
-    --primary: #6366f1;
-    /* Indigo */
+    --primary: #6366f1; /* Indigo */
     --primary-glow: rgba(99, 102, 241, 0.5);
-    --secondary: #8b5cf6;
-    /* Purple */
-    --accent: #06b6d4;
-    /* Cyan */
+    --secondary: #8b5cf6; /* Purple */
+    --accent: #06b6d4; /* Cyan */
 
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
@@ -23,6 +20,23 @@
 
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
+}
+
+body.light-mode {
+    --bg-dark: #f0f4f8;
+    --bg-card: rgba(255, 255, 255, 0.8);
+    --bg-nav: rgba(255, 255, 255, 0.9);
+
+    --primary: #4f46e5;
+    --primary-glow: rgba(79, 70, 229, 0.4);
+    --secondary: #7c3aed;
+    --accent: #0891b2;
+
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -1272,4 +1286,302 @@ footer {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* =========================================
+   NEW ENHANCEMENTS (THEME, PARTICLES, 3D TILT, TIMELINE, FILTER, MODAL)
+   ========================================= */
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--primary);
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: var(--glass-shadow);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+    background: var(--primary);
+    color: #fff;
+}
+
+/* Particles Container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* 3D Tilt for Hero Profile Card */
+.profile-card {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.profile-card:hover {
+    animation: none; /* Disable floating on hover so JS can take over */
+}
+
+/* Timeline in About Section */
+.timeline {
+    margin-top: 40px;
+    padding-left: 20px;
+    border-left: 3px solid var(--primary);
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 25px;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(5px);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -30.5px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: var(--bg-card);
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    background: var(--accent);
+    box-shadow: 0 0 15px var(--accent);
+}
+
+.timeline-content {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.timeline-content h4 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Skill Filters */
+.skill-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    box-shadow: 0 4px 15px var(--primary-glow);
+}
+
+/* Hide skill card animation class */
+.skill-card-enhanced.hide {
+    display: none;
+}
+
+/* Project Modal Popup */
+.project-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 15, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.project-modal-content {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.9) translateY(30px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.project-modal-backdrop.active .project-modal-content {
+    transform: scale(1) translateY(0);
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.close-modal-btn:hover {
+    background: #ef4444;
+    transform: rotate(90deg);
+    border-color: #ef4444;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .modal-body {
+        flex-direction: row;
+    }
+}
+
+.modal-image-container {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, var(--bg-dark), var(--primary-glow));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .modal-image-container {
+        width: 40%;
+        height: auto;
+        min-height: 350px;
+    }
+}
+
+.modal-img-placeholder i {
+    font-size: 5rem;
+    color: var(--primary);
+    filter: drop-shadow(0 0 15px var(--primary-glow));
+}
+
+.modal-info-container {
+    padding: 40px;
+    flex: 1;
+}
+
+.modal-info-container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-tags span {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--primary);
+    border-radius: 20px;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.modal-desc {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* Form Validation Styles */
+.form-group-float input:focus:valid,
+.form-group-float textarea:focus:valid,
+.form-group-float input:not(:placeholder-shown):valid,
+.form-group-float textarea:not(:placeholder-shown):valid {
+    border-color: #10b981; /* Green */
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+}
+
+.form-group-float input:focus:invalid:not(:placeholder-shown),
+.form-group-float textarea:focus:invalid:not(:placeholder-shown) {
+    border-color: #ef4444; /* Red */
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
 }
